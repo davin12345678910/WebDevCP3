@@ -1,0 +1,143 @@
+/*
+ * Name: Davin Win Kyi
+ * Date: April 17th, 2022
+ * Section: CSE 154 AH
+ * This is the CSS code for for my poke battle simulator.
+ * it gives the website the decorations and aestetic touches i need.
+ */
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-style: bold;
+}
+
+#buttons, .pokemon-chosen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  height: 50px;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.pokemon-chosen {
+  flex-direction: vertical;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}
+
+body {
+  background-image: url("poke-battlefield.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Heebo', sans-serif;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.game-text, .fainted, .missed {
+  font-style: bold;
+}
+
+/* For a font-size of 30px */
+.game-text, .name, .fainted, .missed {
+  font-size: 30px;
+}
+
+.firstPokemon {
+  bottom: 0px;
+  left: 0px;
+}
+
+.secondPokemon {
+  top: 0px;
+  right: 0px;
+}
+
+.firstPokemon, .secondPokemon {
+  position: fixed;
+}
+
+.hp {
+  font-size: 50px;
+}
+
+.fainted, .error {
+  color: red;
+}
+
+.missed {
+  background-color: azure;
+  text-decoration: underline;
+}
+
+.highlight {
+  background-color: greenyellow;
+}
+
+.error {
+  font-size: 100px;
+}
+
+/* Got this from W3Schools, for the shaking functionality:
+https://www.w3schools.com/howto/howto_css_shake_image.asp
+*/
+.shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
